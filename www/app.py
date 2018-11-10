@@ -11,6 +11,8 @@ async def second(request):
     return web.Response(text='<h2>second</h2>',content_type='text/html')
 
 app = web.Application()
+
+# 添加路由
 app.add_routes([
     web.get('/', index),
     web.get('/se', second),
