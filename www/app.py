@@ -4,10 +4,10 @@ import logging; logging.basicConfig(level=logging.INFO)
 
 from aiohttp import web
 
-def index(request):
+async def index(request):
     return web.Response(text='<h1>awesome blog</h1>',content_type='text/html')
 
-def second(request):
+async def second(request):
     return web.Response(text='<h2>second</h2>',content_type='text/html')
 
 app = web.Application()
