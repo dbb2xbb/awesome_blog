@@ -35,12 +35,9 @@ def parse_html_content(content):
 
 def show_res(alist):
     print(alist)
-    # for item in alist:
-    #     for k,v in item:
-    #         print(k, v)
 
 def main():
-    url = 'https://baike.baidu.com/item/%E5%90%8E%E5%AE%AB%E5%8A%A8%E6%BC%AB/8550893?fr=aladdin'
+    url = ''
     cnt = get_html_content(url=url)
     res = parse_html_content(cnt)
     show_res(res)
