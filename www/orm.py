@@ -83,3 +83,19 @@ class Model(dict, metaclass=ModelMetaClass):
                 setattr(self, key, value)
 
         return value
+
+class Field(object):
+    def __init__(self, name, column_type, primary_key, default):
+        self.name = name
+        self.colume_type = column_type
+        self.primary_key = primary_key
+        self.default = default
+
+    def __str__(self):
+        return "<{}:{}:{}>".format(self.__class__.__name__, self.colume_type, self.name)
+
+class StringField(Field):
+    def __init__(self, name=None, primary_key=False, default=None, dd1='varchar(100)'):
+        super().__init__(name, dd1, primary_key, default)
+
+
